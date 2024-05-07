@@ -26,12 +26,10 @@ def generateKeys():
 def encrypt(message, key):
     encrypted_message = rsa.encrypt(message.encode('utf-8'), key)
     encoded_message = base64.b64encode(encrypted_message).decode('utf-8')
-    #print(encoded_message)
     return print(encoded_message)
 
 def decrypt(ciphertext, key):
     decrypted_message = rsa.decrypt(ciphertext, key).decode('utf-8')
-    #print(decrypted_message)
     return print(decrypted_message)
 
 def importkeys():
